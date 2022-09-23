@@ -4,9 +4,12 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Main Page</title>
+<link rel="stylesheet" href="./resource/css/bootstrap.css">
 </head>
 <body>
-	hello world !
+	<%@include file="header.html" %>
+	<jsp:include page="./WEB-INF/carousel.jsp" />
+	<jsp:include page="./WEB-INF/footer.jsp" />
 </body>
 </html>
