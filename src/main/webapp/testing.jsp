@@ -9,5 +9,6 @@
 <body>
 test file.
 test file2.
+test file3.
 </body>
 </html>
