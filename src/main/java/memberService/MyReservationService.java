@@ -1,6 +1,7 @@
 package memberService;
 
 import basicService.Member;
+import resService.Movie;
 
 public class MyReservationService {
 	

@@ -15,7 +15,8 @@ public class MovieRegist {
 	private int LimitedAge;
 	private String[] TheaterInfo;
 	
-	public insert() {
+	// 임시 void
+	public void insert() {
 		
 	}
 	

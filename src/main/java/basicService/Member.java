@@ -13,7 +13,7 @@ public class Member {
 	private LocalDateTime RegDate;
 	private String Gender;
 	private String[] Preference;
-	private String[] resMovie;
+	static String[] resMovie;
 	
 	public String getId() {
 		return Id;
