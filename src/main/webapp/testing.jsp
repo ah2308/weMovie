@@ -7,6 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-test file. 
+test file.
+test file2.
 </body>
 </html>
