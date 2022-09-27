@@ -14,6 +14,7 @@ public class SeatInfo {
 	}
 	
 	public String[] getSeats() {
+		return null;
 		
 	}
 }

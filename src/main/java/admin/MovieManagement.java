@@ -1,5 +1,7 @@
 package admin;
 
+import resService.Movie;
+
 public class MovieManagement {
 	
 	private MovieRegist movieRegist;

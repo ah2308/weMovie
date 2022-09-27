@@ -2,6 +2,8 @@ package basicService;
 
 import javax.servlet.http.HttpSession;
 
+import org.springframework.ui.Model;
+
 public class LoginController implements MemberService {
 
 	private MemberService memberservice;
@@ -14,7 +16,8 @@ public class LoginController implements MemberService {
 		return null;
 	}
 	
-	public loginPost(LoginDTO loginDTO, HttpSession httpSession, Model model) {
+	//임시 void
+	public void loginPost(LoginDTO loginDTO, HttpSession httpSession, Model model) {
 	
 	}
 }
