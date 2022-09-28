@@ -1,6 +1,5 @@
 package com.weMovies.controller;
 
-import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,6 +16,7 @@ public class MemberController {
 
 	@Autowired
 	MemberService memberService;
+
 	// menu.do 클릭 -> view/member/login.jsp
 	@RequestMapping("login.do")
 	public String login() {
@@ -25,16 +25,16 @@ public class MemberController {
 
 	@RequestMapping("login_check.do")
 	public ModelAndView login_check(@ModelAttribute MemberDTO dto, HttpSession session) {
-	 String name = memberService.loginCheck(dto, session);  
-	 ModelAndView mav = new ModelAndView();
-	  if (name != null) { // 로그인 성공 시
-	   mav.setViewName("home"); // 뷰의 이름
-	   } else { // 로그인 실패 시
-	     mav.setViewName("member/login"); 		
-	     mav.addObject("message", "error");
-	     }
-	     return mav;
-	   }
+		String name = memberService.loginCheck(dto, session);
+		ModelAndView mav = new ModelAndView();
+		if (name != null) { // 로그인 성공 시
+			mav.setViewName("home"); // 뷰의 이름
+		} else { // 로그인 실패 시
+			mav.setViewName("member/login");
+			mav.addObject("message", "error");
+		}
+		return mav;
+	}
 
 	@RequestMapping("logout.do")
 	public ModelAndView logout(HttpSession session, ModelAndView mav) {
