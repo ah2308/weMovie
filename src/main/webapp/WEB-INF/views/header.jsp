@@ -16,7 +16,7 @@
             <div class="navbar_logo">
                 <h1>
                     <i class="fa-brands fa-stumbleupon"></i>
-                    <a href="index">We: Movie</a>
+                    <a href="index">We : Movie</a>
                 </h1>
             </div>
             <ul class="navbar_menu">

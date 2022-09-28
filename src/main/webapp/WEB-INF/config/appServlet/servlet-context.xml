@@ -11,7 +11,7 @@
     <annotation-driven />
     
     
-    <context:component-scan base-package="ctr" />
+    <context:component-scan base-package="com.weMovies" />
     
     <default-servlet-handler/>
     <resources mapping="/resources/**" location="/resources/" />
