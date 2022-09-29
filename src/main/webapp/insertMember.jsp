@@ -11,14 +11,14 @@
 <body>
 	<%@include file="header.jsp" %>
 	<main>
-		<form action="resultMember.jsp" method="post">
+		<form action="member.do?choice=insertMember" method="post">
 			<div>
 				<label>아 이 디</label>
 				<input type="text" name="id" value="" required placeholder="아 이 디" maxlength="30">
 			</div>
 			<div>
 				<label>비밀번호</label>
-				<input type="text" name="password" value="" required placeholder="비 밀 번 호" maxlength="30">
+				<input type="password" name="pwd" value="" required placeholder="비 밀 번 호" maxlength="30">
 			</div>
 			<div>
 				<label> 이 름 </label>

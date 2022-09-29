@@ -16,6 +16,7 @@
 	out.print(vo.getName() + "님 회원가입을 환영합니다^^" + "<br><br>");
 	out.print(vo.getId() + "<br>" + vo.getPwd() + "<br>" + vo.getName() + "<br>" + vo.getAge() + "<br>" + vo.getPhone());
 	%>
+	<input type="button" onclick="location.href='/login.jsp'" value="Login">
 	<div class=""></div>
 </body>
 </html>

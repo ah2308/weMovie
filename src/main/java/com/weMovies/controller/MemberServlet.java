@@ -40,7 +40,7 @@ public class MemberServlet extends HttpServlet {
     }
     
 	protected void insertMember(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		request.setCharacterEncoding("euc-kr");
+		request.setCharacterEncoding("UTF-8");
 		String id = (String)request.getParameter("id");
 		String pwd = (String)request.getParameter("pwd");
 		String name = (String)request.getParameter("name");
