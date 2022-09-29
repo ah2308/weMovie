@@ -1,11 +1,20 @@
 package com.weMovies.service;
 
-import javax.servlet.http.HttpSession;
-import com.weMovies.dto.MemberDTO;
+import com.weMovies.dao.MemberEntity;
+import com.weMovies.dto.MemberVO;
 
-public interface MemberService {
-
-	public String loginCheck(MemberDTO dto, HttpSession session);
-
-	public void logout(HttpSession session);
+public class MemberService {
+	MemberEntity ce;
+	
+	public MemberService() {
+		ce = new MemberEntity();	
+	}
+	
+	public void doMember(MemberVO vo) {
+		ce.doMember(vo);
+	}
+	
+	public void doLogin(MemberVO vo) {
+		ce.doLogin(vo);
+	}
 }

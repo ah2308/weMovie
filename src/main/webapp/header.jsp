@@ -27,8 +27,8 @@
                 <li><a href="">스토어</a></li>
             </ul>
             <ul class="navbar_icons">
-                <li><i class="fa-sharp fa-solid fa-lock"><a href="login">로그인</a></i></li>
-                <li><i class="fa-sharp fa-solid fa-user-plus"><a href="regist">회원가입</a></i></li>
+                <li><i class="fa-sharp fa-solid fa-lock"><a href="login.jsp">로그인</a></i></li>
+                <li><i class="fa-sharp fa-solid fa-user-plus"><a href="insertMember.jsp">회원가입</a></i></li>
                 <li><i class="fa-sharp fa-solid fa-circle-user"><a>마이페이지</a></i></li>
             </ul>
             <a href="#" class="navbar_toggleBtn">

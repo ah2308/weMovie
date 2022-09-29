@@ -1,17 +1,13 @@
-drop table member;
+DROP TABLE tb_member;
 
-create table member(
-mem_no INT NOT NULL auto_increment,
-userid varchar(50), 
-passwd varchar(50),
-name varchar(50),
-email varchar(50),
-primary key(mem_no)
+CREATE TABLE tb_member (
+   id varchar(15) NOT NULL,
+   pwd varchar(15) NOT NULL,
+   name varchar(15) NOT NULL,
+   age varchar(15) NOT NULL,
+   phone varchar(15) NOT NULL
 );
 
-INSERT INTO member (userid, passwd, name, email)
-VALUES ('hjw452', '1234', '홍진우', 'hjw452@naver.com');
+ALTER TABLE tb_member ADD PRIMARY KEY (id);
 
-select * from member;
-
-COMMIT;
+SELECT * FROM tb_member;
