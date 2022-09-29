@@ -1,9 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%
 	String sessionId = (String) session.getAttribute("sessionId");
 %>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -20,7 +20,7 @@
             <div class="navbar_logo">
                 <h1>
                     <i class="fa-brands fa-stumbleupon"></i>
-                    <a href="index">We : Movie</a>
+                    <a href="index.jsp">We : Movie</a>
                 </h1>
             </div>
             <ul class="navbar_menu">
@@ -37,7 +37,7 @@
                 <li><i class="fa-sharp fa-solid fa-user-plus"><a href='<c:url value="insertMember.jsp"/>'>회원가입</a></i></li>
                 </c:when>
                 <c:otherwise>
-                <li style="padding-top: 7px; color: white">[<%=sessionId%>님]</li>
+                ${sessionId}
                 <li><i class="fa-sharp fa-solid fa-lock"><a href="<c:url value="logout.jsp"/>">로그아웃</a></i></li>
                 <li><i class="fa-sharp fa-solid fa-user-plus"><a href='<c:url value="insertMember.jsp"/>'>마이페이지</a></i></li>
                 </c:otherwise>

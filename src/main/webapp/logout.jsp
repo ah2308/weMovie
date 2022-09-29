@@ -7,9 +7,9 @@
 <title>Insert title here</title>
 </head>
 <body>
-
+<%@include file="header.jsp" %>
 <form action="member.do?choice=logout" method="post">
-<input type="submit" value="logout"/>
+<input type="button" onclick="location.href='/index.jsp'" value="logout">
 </form>
 
 </body>
