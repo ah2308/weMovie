@@ -1,5 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%
+	String sessionId = (String) session.getAttribute("sessionId");
+%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -27,9 +31,17 @@
                 <li><a href="">스토어</a></li>
             </ul>
             <ul class="navbar_icons">
-                <li><i class="fa-sharp fa-solid fa-lock"><a href="login.jsp">로그인</a></i></li>
-                <li><i class="fa-sharp fa-solid fa-user-plus"><a href="insertMember.jsp">회원가입</a></i></li>
-                <li><i class="fa-sharp fa-solid fa-circle-user"><a>마이페이지</a></i></li>
+            <c:choose>
+					<c:when test="${empty sessionId}">
+                <li><i class="fa-sharp fa-solid fa-lock"><a href="<c:url value="login.jsp"/>">로그인</a></i></li>
+                <li><i class="fa-sharp fa-solid fa-user-plus"><a href='<c:url value="insertMember.jsp"/>'>회원가입</a></i></li>
+                </c:when>
+                <c:otherwise>
+                <li style="padding-top: 7px; color: white">[<%=sessionId%>님]</li>
+                <li><i class="fa-sharp fa-solid fa-lock"><a href="<c:url value="logout.jsp"/>">로그아웃</a></i></li>
+                <li><i class="fa-sharp fa-solid fa-user-plus"><a href='<c:url value="insertMember.jsp"/>'>마이페이지</a></i></li>
+                </c:otherwise>
+				</c:choose>
             </ul>
             <a href="#" class="navbar_toggleBtn">
                 <i class="fa-sharp fa-solid fa-bars"></i>
