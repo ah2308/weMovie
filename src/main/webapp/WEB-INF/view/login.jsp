@@ -9,17 +9,15 @@
 <title>우리들의 영화관. WE:MOVIE 로그인 페이지</title>
 </head>
 <body>
-	<%@include file="header.jsp"%>
+	<%@include file="./header.jsp"%>
 	<main>
-		<form action="${pageContext.request.contextPath }member.do?choice=login" method="post">
-			<input type="text" name="id" value="" required placeholder="아이디를 입력해주세요." maxlength="30"> 
-			<input type="password" name="pwd" value="" required placeholder="비밀번호를 입력해주세요." maxlength="30"><br> 
-			<input type="submit" value="로그인" class="login-btn"> 
-			<input type="button" onclick="location.href='/insertMember.jsp'" value="회원가입">
+		<form action="login" method="post">
+			<input type="text" name="id" id="id" required placeholder="아이디를 입력해주세요." maxlength="30"> 
+			<input type="password" name="password" id="password" required placeholder="비밀번호를 입력해주세요." maxlength="30"><br> 
+			<input type="submit" value="로그인"> 
 			<span class="id-search"><a href="/find/id">아이디 찾기</a></span> <span>|</span>
 			<span><a href="/find/password">비밀번호 찾기</a></span>
 		</form>
-
 	</main>
 </body>
 </html>

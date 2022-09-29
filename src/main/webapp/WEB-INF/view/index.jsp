@@ -9,7 +9,7 @@
 <link rel="stylesheet" href="resource/css/bootstrap.css">
 </head>
 <body>
-	<%@include file="header.jsp" %>
+	<%@include file="./header.jsp" %>
 	<div class=""></div>
 </body>
 </html>

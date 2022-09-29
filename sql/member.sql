@@ -1,6 +1,6 @@
-DROP TABLE tb_member;
+DROP TABLE member;
 
-CREATE TABLE tb_member (
+CREATE TABLE member (
    id varchar(15) NOT NULL,
    pwd varchar(15) NOT NULL,
    name varchar(15) NOT NULL,
@@ -8,6 +8,6 @@ CREATE TABLE tb_member (
    phone varchar(15) NOT NULL
 );
 
-ALTER TABLE tb_member ADD PRIMARY KEY (id);
+ALTER TABLE member ADD PRIMARY KEY (id);
 
-SELECT * FROM tb_member;
+SELECT * FROM member;

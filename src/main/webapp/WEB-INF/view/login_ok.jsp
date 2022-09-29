@@ -11,8 +11,8 @@
 <body>
 	<%@include file="header.jsp" %>
 	<div class=""></div>
-	Welcome ${sessionScope.username }
+	Welcome
 	<input type="button" onclick="location.href='/index.jsp'" value="Home">
-	<a href="${pageContext.request.contextPath }logout.jsp">Logout</a>
+	<a href="logout">Logout</a>
 </body>
 </html>
