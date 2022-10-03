@@ -1,22 +1,21 @@
 package com.weMovies.dao;
 
-import org.apache.ibatis.session.SqlSession;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Repository;
-import org.springframework.stereotype.Service;
+import javax.inject.Inject;
 
+import org.apache.ibatis.session.SqlSession;
+import org.springframework.stereotype.Repository;
 import com.weMovies.dto.MemberDTO;
 
-@Repository // 현재 클래스 dao bean 등록
-@Service
+@Repository("memberDAO")
 public class MemberDAOImpl implements MemberDAO {
-
-	@Autowired
-	private SqlSession sqlSession; // SQLSession 의존관계 주입
+	
+	@Inject
+	SqlSession sqlSession;
 
 	@Override
-	public String loginCheck(MemberDTO dto) {
-		return sqlSession.selectOne("member.login_check", dto);
+	public String login(MemberDTO dto) throws Exception {
+		// TODO Auto-generated method stub
+		return sqlSession.selectOne("member.login", dto);
 	}
 
 }

@@ -1,50 +1,75 @@
 package com.weMovies.dto;
 
-import java.sql.Date;
+import lombok.Getter;
 
+@Getter
 public class MemberDTO {
-
-	private String userid;
-	private String userpw;
+	private String mid;
+	private String pwd;
 	private String name;
 	private String email;
-	private Date join_date;
-
-	public String getUserid() {
-		return userid;
+	private String birth;
+	private String mauth;
+	private String reg_date;
+	
+	public MemberDTO() {
 	}
-
-	public void setUserid(String userid) {
-		this.userid = userid;
+	
+	public MemberDTO(String mid, String pwd, String name, String email, String birth, String mauth, String reg_date) {
+		this.mid = mid;
+		this.pwd = pwd;
+		this.name = name;
+		this.email = email;
+		this.birth = birth;
+		this.mauth = mauth;
+		this.reg_date = reg_date;
 	}
-
-	public String getUserpw() {
-		return userpw;
+	
+	public String getMid() {
+		return mid;
 	}
-
-	public void setUserpw(String userpw) {
-		this.userpw = userpw;
+	public void setMid(String mid) {
+		this.mid = mid;
 	}
-
+	public String getPwd() {
+		return pwd;
+	}
+	public void setPwd(String pwd) {
+		this.pwd = pwd;
+	}
 	public String getName() {
 		return name;
 	}
-
 	public void setName(String name) {
 		this.name = name;
 	}
-
 	public String getEmail() {
 		return email;
 	}
-
 	public void setEmail(String email) {
 		this.email = email;
 	}
-
+	public String getBirth() {
+		return birth;
+	}
+	public void setBirth(String birth) {
+		this.birth = birth;
+	}
+	public String getMauth() {
+		return mauth;
+	}
+	public void setMauth(String mauth) {
+		this.mauth = mauth;
+	}
+	public String getReg_date() {
+		return reg_date;
+	}
+	public void setReg_date(String reg_date) {
+		this.reg_date = reg_date;
+	}
 	@Override
 	public String toString() {
-		return "MemberDTO [userid=" + userid + ", userpw=" + userpw + ", name=" + name + ", email=" + email
-				+ ", join_date=" + join_date + "]";
+		return "MemberDTO [user_id=" + mid + ", passwd=" + pwd + ", name=" + name + ", email=" + email + ", birth=" + birth + ", mauth=" + mauth + ", reg_date=" + reg_date +"]";
 	}
+	
 }
