@@ -65,7 +65,7 @@ public class MemberController {
     public String goregistPage() {
         return "member/register";
     }
-    
+     
     @RequestMapping("register.do")
     public String register(MemberDTO dto) throws Exception {
         service.register(dto);
