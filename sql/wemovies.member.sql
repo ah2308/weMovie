@@ -1,3 +1,5 @@
+drop table wemovies.member;
+
 create table wemovies.member(
 	mid varchar(100),
     pwd varchar(100),

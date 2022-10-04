@@ -45,5 +45,4 @@
     <bean class="org.springframework.jdbc.datasource.DataSourceTransactionManager" id="dataSourceTransactionManager">
         <property name="dataSource" ref="basicDataSource"/>
     </bean>
-    
 </beans>
