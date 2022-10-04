@@ -4,8 +4,10 @@
 <configuration>
   <typeAliases>
   	<typeAlias type="com.weMovies.dto.MemberDTO" alias="MemberDTO"/>
+  	<typeAlias type="com.weMovies.dao.MemberDAO" alias="MemberDAO"/>
   </typeAliases>
   <mappers>
     <mapper resource="mapper/member.xml"/>
+    <mapper resource="mapper/insertMember.xml"/>
   </mappers>
 </configuration>

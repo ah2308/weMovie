@@ -9,7 +9,4 @@ create table wemovies.member(
     primary key(mid)
 );
 
-insert into wemovies.member (mid, pwd, name, email, birth, mauth, reg_date) 
-values ('role', '1234', '회원', 'role452@naver.com', '2022-10-04', 'B', now());
-
 select * from wemovies.member;

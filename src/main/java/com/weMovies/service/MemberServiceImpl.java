@@ -23,4 +23,9 @@ public class MemberServiceImpl implements MemberService {
 	public void logout(HttpSession session) {
 	 session.invalidate(); // 세션 초기화
 	}
+
+    @Override
+    public void register(MemberDTO dto) throws Exception{
+        dao.register(dto);
+    }
 }

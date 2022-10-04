@@ -52,13 +52,11 @@ public class MemberController {
 	 mav.addObject("message", "logout"); 
 	  return mav;
     }
+	/* 임시 로그아웃 기능 @RequestMapping("member/logout") public String logout(HttpSession session) { session.invalidate(); return "redirect:/";} */
 	
-	/*
-	임시 로그아웃 기능
-    @RequestMapping("member/logout")
-    public String logout(HttpSession session) {
-        session.invalidate();
-        return "redirect:/";
-    }
-    */
+	@RequestMapping("register")
+	public String regist(MemberDTO dto) throws Exception {
+	    service.register(dto);
+	    return "member/register";
+	}
 }

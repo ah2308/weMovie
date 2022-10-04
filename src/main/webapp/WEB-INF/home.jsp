@@ -10,7 +10,7 @@
 <c:choose>
 	<c:when test="${sessionScope.mid == null}">
 		<a href="member/login">로그인</a>
-		<a href="regist/regist.do">회원가입</a>
+		<a href="member/register">회원가입</a>
 	</c:when>
 	<c:otherwise>
 		${sessionScope.mid}님 로그인 상태.

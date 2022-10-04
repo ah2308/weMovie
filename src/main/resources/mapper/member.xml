@@ -5,7 +5,9 @@
 
 <mapper namespace="member">
 
-  <select id="login" resultType="String">
-    SELECT name, email, birth, mauth, reg_date FROM wemovies.member where mid = #{mid} and pwd = #{pwd}
-  </select>
+	<select id="login" resultType="String">
+		SELECT name, email, birth, mauth, reg_date FROM wemovies.member where mid =
+		#{mid} and pwd = #{pwd}
+	</select>
+
 </mapper>
