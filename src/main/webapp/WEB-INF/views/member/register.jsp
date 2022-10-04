@@ -9,7 +9,7 @@
 <body>
 	<h2>회원가입</h2>
 	<div class="container">
-		<form action="/member/register" method="post">
+		<form action="/member/menu" method="post">
 			<input type="hidden" name="act" value="mid">
 			<div class="form-group">
 				<label for="id">id</label> 
