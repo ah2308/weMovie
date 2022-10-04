@@ -59,6 +59,13 @@ public class MemberController {
      * session) { session.invalidate(); return "redirect:/";}
      */
 
+    
+    // 로그인 버튼을 누르면 폼 화면으로 이동시켜주는 역할
+    @RequestMapping("register")
+    public String goregistPage() {
+        return "member/register";
+    }
+    
     @RequestMapping("register.do")
     public String register(MemberDTO dto) throws Exception {
         service.register(dto);
