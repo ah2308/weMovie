@@ -19,7 +19,7 @@ public class MemberDAOImpl implements MemberDAO {
 
     @Override
     public void register(MemberDTO dto) throws Exception {
-        sqlSession.insert("member.register", dto);
+        sqlSession.insert("insertMember.register", dto);
     }
 
 }

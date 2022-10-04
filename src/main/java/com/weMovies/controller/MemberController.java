@@ -8,6 +8,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.weMovies.dao.MemberDAO;
 import com.weMovies.dto.MemberDTO;
 import com.weMovies.service.MemberService;
 

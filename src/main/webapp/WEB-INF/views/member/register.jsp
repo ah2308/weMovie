@@ -9,7 +9,11 @@
 <body>
 	<h2>회원가입</h2>
 	<div class="container">
+<<<<<<< HEAD
 		<form action="/member/menu" method="post">
+=======
+		<form action="/member/register.do" method="post">
+>>>>>>> 8f3b823bb239654819616c2a1025ef0ef4875a8d
 			<input type="hidden" name="act" value="mid">
 			<div class="form-group">
 				<label for="id">id</label> 

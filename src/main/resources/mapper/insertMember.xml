@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<<<<<<< HEAD
 <mapper namespace="member">
+=======
+<mapper namespace="insertMember">
+>>>>>>> 8f3b823bb239654819616c2a1025ef0ef4875a8d
 	<insert id="register">
 		INSERT INTO wemovies.member(
 		mid,
@@ -18,8 +22,13 @@
 		#{name},
 		#{email},
 		#{birth},
+<<<<<<< HEAD
 		'B',
 		SYSDATE
+=======
+		null,
+		now()
+>>>>>>> 8f3b823bb239654819616c2a1025ef0ef4875a8d
 		)
 	</insert>
 </mapper>
