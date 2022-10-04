@@ -1,6 +1,7 @@
 package com.weMovies.service;
 
 import javax.inject.Inject;
+import javax.servlet.http.HttpSession;
 
 import org.springframework.stereotype.Service;
 
@@ -17,5 +18,9 @@ public class MemberServiceImpl implements MemberService {
 	public String login(MemberDTO dto) throws Exception {
 		return dao.login(dto);
 	}
-
+	
+	@Override
+	public void logout(HttpSession session) {
+	 session.invalidate(); // 세션 초기화
+	}
 }

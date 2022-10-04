@@ -39,15 +39,26 @@ public class MemberController {
 		return mav;
 	}
 	
-	@RequestMapping("member/logout")
-	public String logout(HttpSession session) {
-		session.invalidate();
-		return "redirect:/";
-	}
-	
 	//로그인이 완료되었을때 주소를 반환하는데, 이 때 주소를 처리할 컨트롤러.
 	@RequestMapping("menu")
 	public String menu() {
 		return "member/menu";
 	}
+	//로그인 상태에서 세션값 초기화. 로그아웃
+	@RequestMapping("logout.do")
+	public ModelAndView logout(HttpSession session, ModelAndView mav)throws Exception{
+	service.logout(session); 
+	 mav.setViewName("../home"); 
+	 mav.addObject("message", "logout"); 
+	  return mav;
+    }
+	
+	/*
+	임시 로그아웃 기능
+    @RequestMapping("member/logout")
+    public String logout(HttpSession session) {
+        session.invalidate();
+        return "redirect:/";
+    }
+    */
 }

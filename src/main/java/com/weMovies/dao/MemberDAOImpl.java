@@ -14,7 +14,6 @@ public class MemberDAOImpl implements MemberDAO {
 
 	@Override
 	public String login(MemberDTO dto) throws Exception {
-		// TODO Auto-generated method stub
 		return sqlSession.selectOne("member.login", dto);
 	}
 

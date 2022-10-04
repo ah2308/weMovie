@@ -10,5 +10,8 @@
 	${sessionScope.name }
 	(${sessionScope.mid })´Ô È¯¿µÇÕ´Ï´Ù.
 	<hr>
+	<form action="/member/logout.do" method="post">
+	<button type="submit" id="${message == 'logout'}">·Î±×¾Æ¿ô </button>
+	</form>
 </body>
 </html>
