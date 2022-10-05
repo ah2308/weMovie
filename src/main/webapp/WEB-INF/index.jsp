@@ -58,10 +58,10 @@
               <div class="carousel-item active" style="background-image:url('${path}/resources/assets/img/home-bg.jpg'); height: 600px;">
               </div>
               <div class="carousel-item">
-                <img src="..." class="d-block w-100" style="background-image:url('${path}/resources/assets/img/movie_img_01.jpg!d'); height: 600px;">
+                <img class="d-block w-100" style="background-image:url('${path}/resources/assets/img/movie_img_01.jpg!d'); height: 600px;">
               </div>
               <div class="carousel-item">
-                <img src="..." class="d-block w-100" style="background-image:url('${path}/resources/assets/img/movie_img_02.jpg'); height: 600px;">
+                <img class="d-block w-100" style="background-image:url('${path}/resources/assets/img/movie_img_02.jpg'); height: 600px;">
               </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
@@ -151,6 +151,6 @@
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
-        <script src="js/scripts.js"></script>
+        <script src="${path}/resources/js/scripts.js"></script>
     </body>
 </html>

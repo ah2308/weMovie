@@ -1,8 +1,10 @@
 package com.weMovies.dto;
 
 import lombok.Getter;
+import lombok.Setter;
 
 @Getter
+@Setter
 public class MemberDTO {
 	private String mid;
 	private String pwd;
