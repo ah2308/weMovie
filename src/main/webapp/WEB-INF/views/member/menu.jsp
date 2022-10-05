@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="EUC-KR">
-<title>Insert title here</title>
+<title>메뉴</title>
 </head>
 <body>
 	${sessionScope.name } (${sessionScope.mid })님 환영합니다.
