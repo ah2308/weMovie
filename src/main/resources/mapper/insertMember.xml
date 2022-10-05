@@ -19,9 +19,7 @@
 		#{email},
 		#{birth},
 		'B',
-		SYSDATE
-		null,
-		now()
+		DATE_FORMAT(now(), '%Y-%m-%d')
 		)
 	</insert>
 </mapper>

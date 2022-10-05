@@ -40,7 +40,6 @@
     <bean class="org.mybatis.spring.SqlSessionFactoryBean" id="sqlSessionFactory"> <!-- sqlSessionFactoryBean -->
         <property name="dataSource" ref="basicDataSource"/>
         <property name="configLocation" value="classpath:/mybatis-config.xml" />
-      <!--  <property name="mapperLocations" value="classpath*:/mapper/*.xml"/> Mapper를 2번 검색해서 주석 처리함 --> 
     </bean>
     <bean class="org.springframework.jdbc.datasource.DataSourceTransactionManager" id="dataSourceTransactionManager">
         <property name="dataSource" ref="basicDataSource"/>

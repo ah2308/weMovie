@@ -32,7 +32,7 @@
 					<img src="${path}/resources/images/img-01.png" alt="IMG">
 				</div>
 
-				<form class="login100-form validate-form">
+				<form class="login100-form validate-form" method="post" action="login_check.do">
 					<span class="login100-form-title">
 						Member Login
 					</span>
@@ -54,7 +54,7 @@
 					</div>
 					
 					<div class="container-login100-form-btn">
-						<button class="login100-form-btn" href="login_check.do">
+						<button type="submit" class="login100-form-btn" href="login_check.do">
 							로그인
 						</button>
 					</div>

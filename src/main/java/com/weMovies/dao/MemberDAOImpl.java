@@ -4,6 +4,8 @@ import javax.inject.Inject;
 
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.stereotype.Repository;
+
+import com.weMovies.dto.LoginDTO;
 import com.weMovies.dto.MemberDTO;
 
 @Repository("memberDAO")
