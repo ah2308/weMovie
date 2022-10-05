@@ -1,34 +1,57 @@
-(function () {
-  /* ========= sidebar toggle ======== */
-  const sidebarNavWrapper = document.querySelector(".sidebar-nav-wrapper");
-  const mainWrapper = document.querySelector(".main-wrapper");
-  const menuToggleButton = document.querySelector("#menu-toggle");
-  const menuToggleButtonIcon = document.querySelector("#menu-toggle i");
-  const overlay = document.querySelector(".overlay");
 
-  menuToggleButton.addEventListener("click", () => {
-    sidebarNavWrapper.classList.toggle("active");
-    overlay.classList.add("active");
-    mainWrapper.classList.toggle("active");
+(function ($) {
+    "use strict";
 
-    if (document.body.clientWidth > 1200) {
-      if (menuToggleButtonIcon.classList.contains("lni-chevron-left")) {
-        menuToggleButtonIcon.classList.remove("lni-chevron-left");
-        menuToggleButtonIcon.classList.add("lni-menu");
-      } else {
-        menuToggleButtonIcon.classList.remove("lni-menu");
-        menuToggleButtonIcon.classList.add("lni-chevron-left");
-      }
-    } else {
-      if (menuToggleButtonIcon.classList.contains("lni-chevron-left")) {
-        menuToggleButtonIcon.classList.remove("lni-chevron-left");
-        menuToggleButtonIcon.classList.add("lni-menu");
-      }
+    
+    /*==================================================================
+    [ Validate ]*/
+    var input = $('.validate-input .input100');
+
+    $('.validate-form').on('submit',function(){
+        var check = true;
+
+        for(var i=0; i<input.length; i++) {
+            if(validate(input[i]) == false){
+                showValidate(input[i]);
+                check=false;
+            }
+        }
+
+        return check;
+    });
+
+
+    $('.validate-form .input100').each(function(){
+        $(this).focus(function(){
+           hideValidate(this);
+        });
+    });
+
+    function validate (input) {
+        if($(input).attr('type') == 'email' || $(input).attr('name') == 'email') {
+            if($(input).val().trim().match(/^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{1,5}|[0-9]{1,3})(\]?)$/) == null) {
+                return false;
+            }
+        }
+        else {
+            if($(input).val().trim() == ''){
+                return false;
+            }
+        }
     }
-  });
-  overlay.addEventListener("click", () => {
-    sidebarNavWrapper.classList.remove("active");
-    overlay.classList.remove("active");
-    mainWrapper.classList.remove("active");
-  });
-})();
+
+    function showValidate(input) {
+        var thisAlert = $(input).parent();
+
+        $(thisAlert).addClass('alert-validate');
+    }
+
+    function hideValidate(input) {
+        var thisAlert = $(input).parent();
+
+        $(thisAlert).removeClass('alert-validate');
+    }
+    
+    
+
+})(jQuery);
