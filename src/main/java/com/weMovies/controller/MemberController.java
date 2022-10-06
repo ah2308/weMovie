@@ -20,7 +20,7 @@ public class MemberController {
     private MemberService service;
     
     // 메인화면으로 보내줄 맵핑
-    @RequestMapping("/")
+    @RequestMapping("index")
     public String menu() {
         return "index";
     }
@@ -37,7 +37,7 @@ public class MemberController {
         if (name != null) {
             session.setAttribute("mid", dto.getMid());
             session.setAttribute("name", dto.getName());
-            mav.setViewName("redirect:/");
+            mav.setViewName("index");
         } else {
             mav.setViewName("member/loginForm");
         }
@@ -68,6 +68,7 @@ public class MemberController {
         service.logout(session);
     //   mav.setViewName("redirect:/");
         model.addAttribute("msg", "성공적으로 로그아웃 하였습니다.");
+        model.addAttribute("url", "index");
         return "alert/message";
     }
     
@@ -84,7 +85,7 @@ public class MemberController {
             // 회원가입 성공시 msg, url을 설정합니다.
             service.register(dto);
             model.addAttribute("msg", "회원가입이 완료되었습니다.");
-            model.addAttribute("url", "");
+            model.addAttribute("url", "index");
         }catch(Exception e) {
             // 회원가입 실패시 msg, url을 설정합니다.
             model.addAttribute("msg", "회원가입에 실패하였습니다.");
