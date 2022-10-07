@@ -25,31 +25,6 @@
 <!--===============================================================================================-->
 	<script src="https://kit.fontawesome.com/3400d00a45.js" crossorigin="anonymous"></script>
 	<script type="text/javascript">
-	$(document).ready(function(){
-		$("#submit").on("click", function(){
-			if($("#mid").val()==""){
-				alert("아이디를 입력해주세요.");
-				$("#mid").focus();
-				return false;
-			}
-			if($("#pwd").val()==""){
-				alert("비밀번호를 입력해주세요.");
-				$("#pwd").focus();
-				return false;
-			}
-			if($("#name").val()==""){
-				alert("성명을 입력해주세요.");
-				$("#name").focus();
-				return false;
-			}
-			var idChkVal = $("#idChk").val();
-			if(idChkVal == "N"){
-				alert("중복확인 버튼을 눌러주세요.");
-			}else if(idChkVal == "Y"){
-				$("#regForm").submit();
-			}
-		});
-	})
 	
 	function fn_idChk(){
 		$.ajax({
@@ -82,7 +57,7 @@
 						Member Regist
 					</span>
 					<div class="wrap-input100 validate-input" data-validate = "아이디를 입력해주세요.">
-						<input class="input100" type="text" name="mid" placeholder="ID">
+						<input class="input100" type="text" name="mid" id="mid" placeholder="ID">
 						<button class="idChk" type="button" id="idChk" onclick="fn_idChk();" value="N">중복확인</button>
 						<span class="focus-input100"></span>
 						<span class="symbol-input100">
@@ -98,7 +73,7 @@
 						</span>
 					</div>
 					<div class="wrap-input100 validate-input" data-validate = "이름을 입력해주세요.">
-						<input class="input100" type="text" name="name" placeholder="Your Name">
+						<input class="input100" type="text" name="name" id="name" placeholder="Your Name">
 						<span class="focus-input100"></span>
 						<span class="symbol-input100">
 							<i class="fa-solid fa-user"></i>
