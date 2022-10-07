@@ -8,5 +8,6 @@
   <mappers>
     <mapper resource="mapper/member.xml"/>
     <mapper resource="mapper/insertMember.xml"/>
+    <mapper resource="mapper/resMovie.xml"/>
   </mappers>
 </configuration>

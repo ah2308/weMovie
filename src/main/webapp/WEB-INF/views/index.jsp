@@ -38,6 +38,7 @@
                     </c:when>
                     <c:otherwise>
                       <ul>
+                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="ticket.do">예매하기</a></li>
                         <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="logout.do">로그아웃</a></li>
                         <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="#">마이 페이지</a></li>
                       </ul>
