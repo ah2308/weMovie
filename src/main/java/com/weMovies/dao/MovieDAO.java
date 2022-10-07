@@ -1,5 +1,12 @@
 package com.weMovies.dao;
 
+import com.weMovies.dto.MovieDTO;
+
+public interface MovieDAO {
+    
+    public void apiLoad(MovieDTO mdto)throws Exception;
+
+
 import com.weMovies.dto.LoginDTO;
 import com.weMovies.dto.MemberDTO;
 import com.weMovies.dto.MovieDTO;

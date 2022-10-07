@@ -1,67 +1,64 @@
 package com.weMovies.dto;
 
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
 public class MovieDTO {
-    private String mid;
-    private String res_name;
-    private String res_t_locate;
-    private String res_seat;
-    private String res_price;
-    private String res_day;
-    private String res_lating;
-
-    public String getMid() {
-        return mid;
+    
+    private int id;
+    private String original_title;
+    private String title;
+    private String poster_path;
+    private String release_date;
+    private String overview;
+    private String[] genres;
+    private int runtime;
+    
+    public MovieDTO() {
     }
-
-    public void setMid(String mid) {
-        this.mid = mid;
+    public MovieDTO(int id, String original_title, String title, String poster_path, String release_date, String overview) {
+        this.id = id;
+        this.original_title = original_title;
+        this.title = title;
+        this.poster_path = poster_path;
+        this.release_date = release_date;
+        this.overview = overview;
     }
-
-    public String getRes_name() {
-        return res_name;
+    public int getId() {
+        return id;
     }
-
-    public void setRes_name(String res_name) {
-        this.res_name = res_name;
+    public void setId(int id) {
+        this.id = id;
     }
-
-    public String getRes_t_locate() {
-        return res_t_locate;
+    public String getOriginal_title() {
+        return original_title;
     }
-
-    public void setRes_t_locate(String res_t_locate) {
-        this.res_t_locate = res_t_locate;
+    public void setOriginal_title(String original_title) {
+        this.original_title = original_title;
     }
-
-    public String getRes_seat() {
-        return res_seat;
+    public String getTitle() {
+        return title;
     }
-
-    public void setRes_seat(String res_seat) {
-        this.res_seat = res_seat;
+    public void setTitle(String title) {
+        this.title = title;
     }
-
-    public String getRes_price() {
-        return res_price;
+    public String getPoster_path() {
+        return poster_path;
     }
-
-    public void setRes_price(String res_price) {
-        this.res_price = res_price;
+    public void setPoster_path(String poster_path) {
+        this.poster_path = poster_path;
     }
-
-    public String getRes_day() {
-        return res_day;
+    public String getRelease_date() {
+        return release_date;
     }
-
-    public void setRes_day(String res_day) {
-        this.res_day = res_day;
+    public void setRelease_date(String release_date) {
+        this.release_date = release_date;
     }
-
-    public String getRes_lating() {
-        return res_lating;
+    public String getOverview() {
+        return overview;
     }
-
-    public void setRes_lating(String res_lating) {
-        this.res_lating = res_lating;
-    }
+    public void setOverview(String overview) {
+        this.overview = overview;
 }

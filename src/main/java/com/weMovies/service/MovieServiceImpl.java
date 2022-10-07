@@ -2,17 +2,19 @@ package com.weMovies.service;
 
 import javax.inject.Inject;
 
+import org.springframework.stereotype.Service;
+
 import com.weMovies.dao.MovieDAO;
 import com.weMovies.dto.MovieDTO;
 
-public class MovieServiceImpl implements MovieService{
-
-    @Inject
-    MovieDAO mDAO;
+@Service("movieService")
+public class MovieServiceImpl implements MovieService {
     
-    @Override
-    public String ticketing(MovieDTO mdto) {
-       return mDAO.ticketing(mdto);
-    }
+    @Inject
+    MovieDAO mdao;
 
+    @Override
+    public void apiLoad(MovieDTO mdto) throws Exception {
+        mdao.apiLoad(mdto);
+    }
 }
