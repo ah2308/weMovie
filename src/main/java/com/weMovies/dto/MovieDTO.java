@@ -61,5 +61,4 @@ public class MovieDTO {
     }
     public void setOverview(String overview) {
         this.overview = overview;
-    }
 }
