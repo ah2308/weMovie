@@ -11,4 +11,6 @@ public interface MemberService {
 	public void logout(HttpSession session);
 	//회원가입
 	public void register(MemberDTO dto) throws Exception;
+	//ID 중복체크
+	public int idChk(String mid) throws Exception;
 }

@@ -28,4 +28,10 @@ public class MemberServiceImpl implements MemberService {
     public void register(MemberDTO dto) throws Exception{
         dao.register(dto);
     }
+
+    @Override
+    public int idChk(String mid) throws Exception {
+        int result = dao.idChk(mid);
+        return result;
+    }
 }

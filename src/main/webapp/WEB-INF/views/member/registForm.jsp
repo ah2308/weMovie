@@ -24,6 +24,50 @@
 	<link rel="stylesheet" type="text/css" href="${path}/resources/css/main.css">
 <!--===============================================================================================-->
 	<script src="https://kit.fontawesome.com/3400d00a45.js" crossorigin="anonymous"></script>
+	<script type="text/javascript">
+	$(document).ready(function(){
+		$("#submit").on("click", function(){
+			if($("#mid").val()==""){
+				alert("아이디를 입력해주세요.");
+				$("#mid").focus();
+				return false;
+			}
+			if($("#pwd").val()==""){
+				alert("비밀번호를 입력해주세요.");
+				$("#pwd").focus();
+				return false;
+			}
+			if($("#name").val()==""){
+				alert("성명을 입력해주세요.");
+				$("#name").focus();
+				return false;
+			}
+			var idChkVal = $("#idChk").val();
+			if(idChkVal == "N"){
+				alert("중복확인 버튼을 눌러주세요.");
+			}else if(idChkVal == "Y"){
+				$("#regForm").submit();
+			}
+		});
+	})
+	
+	function fn_idChk(){
+		$.ajax({
+			url : "idChk",
+			type : "post",
+			dataType : "json",
+			data : 'mid=' + $('#mid').val(),
+			success : function(data){
+				if(data == 1){
+					alert("중복된 아이디입니다.");
+				}else if(data == 0){
+					$("#idChk").attr("value", "Y");
+					alert("사용가능한 아이디입니다.");
+				}
+			}
+		})
+	}
+	</script>
 </head>
 <body>
 	<div class="limiter">
@@ -33,13 +77,13 @@
 					<img src="${path}/resources/images/img-01.png" alt="IMG">
 				</div>
 
-				<form class="login100-form validate-form" action="register.do" method="post">
+				<form class="login100-form validate-form" action="register.do" method="post" id="regForm">
 					<span class="login100-form-title">
 						Member Regist
 					</span>
-
 					<div class="wrap-input100 validate-input" data-validate = "아이디를 입력해주세요.">
 						<input class="input100" type="text" name="mid" placeholder="ID">
+						<button class="idChk" type="button" id="idChk" onclick="fn_idChk();" value="N">중복확인</button>
 						<span class="focus-input100"></span>
 						<span class="symbol-input100">
 							<i class="fa-solid fa-id-badge"></i>

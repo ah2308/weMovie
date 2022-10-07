@@ -24,4 +24,10 @@ public class MemberDAOImpl implements MemberDAO {
         sqlSession.insert("insertMember.register", dto);
     }
 
+    @Override
+    public int idChk(String mid) throws Exception {
+        int result = sqlSession.selectOne("insertMember.idChk", mid);
+        return result;
+    }
+
 }
