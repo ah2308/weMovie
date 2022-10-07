@@ -13,9 +13,9 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.weMovies.dto.LoginDTO;
 import com.weMovies.dto.MemberDTO;
 import com.weMovies.service.MemberService;
+
 
 @Controller
 public class MemberController {
@@ -87,7 +87,7 @@ public class MemberController {
 
     // id 중복체크
     @ResponseBody
-    @RequestMapping(value = "idChk", method = RequestMethod.POST)
+    @RequestMapping("idChk")
     public int idChk(@RequestParam("mid")String mid) throws Exception {
         int result = service.idChk(mid);
         System.out.println(result);
