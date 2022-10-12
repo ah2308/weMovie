@@ -24,6 +24,24 @@
 	<link rel="stylesheet" type="text/css" href="${path}/resources/css/main.css">
 <!--===============================================================================================-->
 	<script src="https://kit.fontawesome.com/3400d00a45.js" crossorigin="anonymous"></script>
+	<script type="text/javascript">
+	function fn_idChk(){
+		$.ajax({
+			url : "idChk",
+			type : "post",
+			dataType : "json",
+			data : 'mid=' + $('#mid').val(),
+			success : function(data){
+				if(data == 1){
+					alert("중복된 아이디입니다.");
+				}else if(data == 0){
+					$("#idChk").attr("value", "Y");
+					alert("사용가능한 아이디입니다.");
+				}
+			}
+		})
+	}
+	</script>
 </head>
 <body>
 	<div class="limiter">
@@ -55,7 +73,7 @@
 						</span>
 					</div>
 					<div class="wrap-input100 validate-input" data-validate = "이름을 입력해주세요.">
-						<input class="input100" type="text" name="name" placeholder="Your Name">
+						<input class="input100" type="text" name="name" id="name" placeholder="Your Name">
 						<span class="focus-input100"></span>
 						<span class="symbol-input100">
 							<i class="fa-solid fa-user"></i>

@@ -104,7 +104,6 @@ public class MemberController {
             if (result == 1) {
                 model.addAttribute("msg", "회원가입에 실패하였습니다.");
                 model.addAttribute("url", "/registForm");
-                //return "/member/registForm";
             } else if (result == 0) {
                 // 회원가입 성공시 msg, url을 설정합니다.
                 service.register(dto);

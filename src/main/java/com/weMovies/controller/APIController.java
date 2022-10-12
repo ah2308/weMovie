@@ -6,13 +6,13 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 
 import javax.servlet.http.HttpServletRequest;
-
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 import com.weMovies.dto.MovieDTO;
 import com.weMovies.service.MovieService;
@@ -27,6 +27,7 @@ public class APIController {
     
     //영화 1차 데이터를 받아옵니다. 40개의 데이터를 가져올 예정.
     @RequestMapping("/movie/api")
+    @RequestMapping("/api")
     public String MovieInfo(){
         String result = "";
         try {
@@ -94,4 +95,7 @@ public class APIController {
         return "admin/admin_upload";
     }
     
+}
+        return "/index";
+    }
 }

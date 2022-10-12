@@ -23,7 +23,7 @@
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-light" id="mainNav">
             <div class="container px-4 px-lg-5">
-                <a class="navbar-brand" href="index.jsp">WE:MOVIE</a>
+                <a class="navbar-brand" href="index">WE:MOVIE</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                     Menu
                     <i class="fas fa-bars"></i>
@@ -39,6 +39,7 @@
                     </c:when>
                     <c:otherwise>
                       <ul>
+                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="ticket.do">예매하기</a></li>
                         <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="logout.do">로그아웃</a></li>
                         <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="#">마이 페이지</a></li>
                       </ul>

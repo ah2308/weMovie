@@ -12,4 +12,3 @@ foreign key (mid) references wemovies.member (mid)
 );
 
 select * from wemovies.movieinfo;
-		

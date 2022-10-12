@@ -1,7 +1,6 @@
 package com.weMovies.service;
 
 import java.util.List;
-
 import com.weMovies.dto.MovieDTO;
 
 public interface MovieService {
@@ -14,4 +13,6 @@ public interface MovieService {
     public void delMovie(String title) throws Exception;
     
     public void mvUpdate(MovieDTO mdto) throws Exception;
+    //예약
+    public String ticketing(MovieDTO mdto);
 }
