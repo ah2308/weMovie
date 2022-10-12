@@ -59,9 +59,6 @@
 						<input class="input100" type="text" name="mid" id="mid" placeholder="ID">
 						<span class="id_ok" style="color:green; display:none;">사용 가능한 아이디입니다.</span>
 						<span class="id_already" style="color:red; display:none;">사용중인 아이디입니다.</span>
-					<div class="wrap-input100 validate-input" data-validate = "아이디를 입력해주세요.">
-						<input class="input100" type="text" name="mid" id="mid" placeholder="ID">
-						<button class="idChk" type="button" id="idChk" onclick="fn_idChk();" value="N">중복확인</button>
 						<span class="focus-input100"></span>
 						<span class="symbol-input100">
 							<i class="fa-solid fa-id-badge"></i>

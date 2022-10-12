@@ -13,10 +13,15 @@ public class MovieDTO {
     private String poster_path;
     private String release_date;
     private String overview;
-    private String[] genres;
+    private String genres;
     private int runtime;
     
     public MovieDTO() {
+    }
+    public MovieDTO(int id, String genres, int runtime) {
+        this.id = id;
+        this.genres = genres;
+        this.runtime = runtime;
     }
     public MovieDTO(int id, String original_title, String title, String poster_path, String release_date, String overview) {
         this.id = id;
@@ -61,4 +66,5 @@ public class MovieDTO {
     }
     public void setOverview(String overview) {
         this.overview = overview;
+    }
 }

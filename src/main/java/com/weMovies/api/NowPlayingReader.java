@@ -14,7 +14,8 @@ public class NowPlayingReader {
         String result = "";
         try {
             // 영화 초기 데이터를 받아오는 API 주소입니다.
-            URL mvInfo = new URL("https://api.themoviedb.org/3/movie/now_playing?api_key=22376a02c7c78135128730f34dd4622a&language=ko-KR&page=1");
+            URL mvInfo = new URL("https://api.themoviedb.org/3/movie/19995?api_key=22376a02c7c78135128730f34dd4622a&language=ko-KR");
+
             HttpURLConnection urlConnection = (HttpURLConnection)mvInfo.openConnection();
             urlConnection.setRequestMethod("GET");
             urlConnection.setRequestProperty("Content-type", "application/json");
@@ -24,6 +25,14 @@ public class NowPlayingReader {
             
             JSONParser jsonParser = new JSONParser();
             JSONObject jsonObject = (JSONObject) jsonParser.parse(result);
+            JSONArray jsonArray = (JSONArray) jsonObject.get("genres");
+            int runtime = Integer.parseInt(jsonObject.get("runtime").toString());
+            for(int i=0; i<jsonArray.size(); i++) {
+                JSONObject object = (JSONObject) jsonArray.get(i);
+                String genres = (String) object.get("name");
+                System.out.println(genres);
+            }
+            System.out.println(runtime);
             JSONArray jsonArray = (JSONArray) jsonObject.get("results");
             for(int i=0; i<jsonArray.size(); i++) {
                 JSONObject object = (JSONObject) jsonArray.get(i);
@@ -35,7 +44,6 @@ public class NowPlayingReader {
                 String poster_path = (String) object.get("poster_path");
                 System.out.println(id);
             }
-            
         }catch(Exception e) {
             e.printStackTrace();
         }

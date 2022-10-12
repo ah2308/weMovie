@@ -11,5 +11,4 @@ res_lating int(20),
 foreign key (mid) references wemovies.member (mid)
 );
 
-select * from wemovies.movie;
-		
+select * from wemovies.movieinfo;

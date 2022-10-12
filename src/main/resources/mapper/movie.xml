@@ -6,4 +6,13 @@
 	<insert id="apiLoad">
 		INSERT IGNORE INTO wemovies.movieinfo(id, original_title, title, poster_path, release_date, overview) values (#{id}, #{original_title}, #{title}, #{poster_path}, #{release_date}, #{overview})
 	</insert>
+	<update id="movieDetail">
+		UPDATE wemovies.movieinfo set genres = #{genres}, runtime = #{runtime} where id = #{id}
+	</update>
+	<select id="movieList" resultType="MovieDTO">
+		SELECT id, title, poster_path, release_date, overview from wemovies.movieinfo
+	</select>
+	<delete id="delMovie">
+		DELETE FROM wemovies.movieinfo where title = #{title}
+	</delete>
 </mapper>
